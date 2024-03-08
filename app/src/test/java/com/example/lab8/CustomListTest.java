@@ -34,6 +34,16 @@ public class CustomListTest {
         list.addCity(new City("Estevan", "SK"));
         assertEquals(list.getCount(),listSize + 1);
     }
+    @Test
+    public void testHasCity() {
+        list = MockCityList(); // Initialize your list using the existing mock method
+        list.addCity(new City("Estevan", "SK"));
+        assertTrue(list.hasCity("Estevan"), "List should have city Estevan");
+        assertFalse(list.hasCity("Regina"), "List should not have city Regina");
+    }
+
+
+
 
 
 
